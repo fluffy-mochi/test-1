@@ -1,0 +1,20 @@
+{
+  "$schema": "./schema/release-it.json",
+  "hooks": {
+    "after:init": ["pnpm lint", "pnpm knip", "pnpm knip --production", "pnpm test"]
+  },
+  "npm": {
+    "stage": true
+  },
+  "github": {
+    "tokenRef": "GITHUB_TOKEN_RELEASE_IT",
+    "release": true,
+    "releaseNotes": {
+      "commit": "* ${commit.subject} (${sha}){ - thanks @${author.login}!}",
+      "excludeMatches": ["webpro"]
+    },
+    "comments": {
+      "submit": true
+    }
+  }
+}

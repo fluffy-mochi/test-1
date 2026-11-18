@@ -1,0 +1,24 @@
+import _import from 'eslint-plugin-import-x';
+import globals from 'globals';
+import js from '@eslint/js';
+
+export default [
+  js.configs.recommended,
+  {
+    plugins: {
+      import: _import
+    },
+    languageOptions: {
+      globals: {
+        ...globals.node
+      },
+      ecmaVersion: 2020,
+      sourceType: 'module'
+    },
+    rules: {
+      'no-unused-vars': ['error', { caughtErrors: 'none' }],
+      'import/no-unresolved': [2, { ignore: ['@octokit/rest', '@octokit/request-error', 'c12'] }],
+      'import/order': [2, { 'newlines-between': 'never' }]
+    }
+  }
+];
