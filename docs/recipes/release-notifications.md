@@ -19,3 +19,6 @@ Add the hook to `.release-it.json`. The service in this example accepts the rele
 
 The example API accepts 60 requests per minute per client. When the client exceeds its limit, the example service
 returns HTTP 429 with a `Retry-After` header in seconds.
+
+For example, a response with `Retry-After: 15` tells the client to wait 15 seconds before sending the next
+notification. If several release jobs share one client, they also share its request budget.
