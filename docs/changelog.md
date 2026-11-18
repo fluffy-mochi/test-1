@@ -6,6 +6,17 @@ commits since the latest tag.
 The [default command][1] is based on `git log ...`. This setting (`git.changelog`) can be overridden. Make sure any of
 these commands output the changelog to `stdout`.
 
+## Preview release notes
+
+From the project root, print the changelog for the next release:
+
+```bash
+npx release-it --changelog
+```
+
+To review the text in an editor, redirect the output to a file, for example
+`npx release-it --changelog > /tmp/release-notes.md` on macOS or Linux.
+
 ## Hide release preview output
 
 For projects with very long changelogs or noisy diffs, you can suppress the preview blocks printed during the release
