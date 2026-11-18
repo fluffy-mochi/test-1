@@ -1,5 +1,9 @@
 # Release It! 🚀
 
+This documentation sandbox contains [release-it 21.1.2](https://github.com/release-it/release-it/tree/10bce4165cb5ce4aca78ac969146317f3fb6e6c5),
+distributed under the [MIT license](LICENSE). Start with the [CLI reference](docs/cli.md) or the
+[release notification API example](docs/recipes/release-notifications.md).
+
 🚀 Generic CLI tool to automate versioning and package publishing-related tasks:
 
 <img align="right" src="./docs/assets/release-it.svg?raw=true" height="280" />
